@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="381dp"
+        android:text="@string/address" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:includeFontPadding="false"
+        android:inputType="textShortMessage"
+        tools:text="@tools:sample/cities"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="41dp"
+        android:text="@string/username" />
+
+    <EditText
+        android:id="@+id/edit_text2"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="106dp"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="59dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="แสนดี ใจดี"
+        android:includeFontPadding="false"
+        android:inputType="text|textPersonName" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="186dp"
+        android:text="@string/fullname" />
+
+    <EditText
+        android:id="@+id/edit_password3"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText"
+        android:layout_alignEnd="@+id/text4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="269dp"
+        android:layout_marginEnd="59dp"
+        android:ems="10"
+        android:hint="0811111111"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="number|phone"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="251dp"
+        android:text="@string/tel" />
+
+    <EditText
+        android:id="@+id/edit_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="333dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:hint="example@mail.com"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="315dp"
+        android:text="@string/email" />
+
+    <Button
+        android:id="@+id/but_delacc"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/text5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-177dp"
+        android:layout_marginBottom="7dp"
+        android:text="ลบบัญชีผู้ใช้" />
+
+</RelativeLayout>
