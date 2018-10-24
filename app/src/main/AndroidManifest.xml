@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".EditProfile"></activity>
+        <activity android:name=".SellerSetting"></activity>
     </application>
 
 </manifest>

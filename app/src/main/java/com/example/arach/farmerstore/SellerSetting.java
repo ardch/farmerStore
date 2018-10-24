@@ -7,6 +7,6 @@ public class SellerSetting extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(sellersetting);
+        setContentView(R.layout.sellersetting);
     }
 }
