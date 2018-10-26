@@ -7,4 +7,5 @@
     <string name="email">E-Mail</string>
     <string name="address">ที่อยู่</string>
     <string name="edit">แก้ไข</string>
+    <string name="deleteAccount">ลบบัญชีผู้ใช้</string>
 </resources>
