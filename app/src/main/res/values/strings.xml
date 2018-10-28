@@ -8,4 +8,16 @@
     <string name="address">ที่อยู่</string>
     <string name="edit">แก้ไข</string>
     <string name="deleteAccount">ลบบัญชีผู้ใช้</string>
+    <string name="productPic">รูปสินค้า</string>
+    <string name="productName">ชื่อสินค้า</string>
+    <string name="price">ราคา</string>
+    <string name="quantity">จำนวน</string>
+    <string name="preorder">สินค้าสั่งจอง</string>
+    <string name="datetosend">วันที่จัดส่งสินค้าได้</string>
+    <string name="buyhistoty">ประวัติการซื้อสินค้า</string>
+    <string name="selectdate">เลือกวันที่</string>
+    <string-array name="proUnit">
+        <item>กิโลกรัม</item>
+        <item>ผล</item>
+    </string-array>
 </resources>

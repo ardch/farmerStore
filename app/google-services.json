@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "829277659109",
+    "firebase_url": "https://test-22303.firebaseio.com",
+    "project_id": "test-22303",
+    "storage_bucket": "test-22303.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829277659109:android:0e3ca9ed4975a3ba",
+        "android_client_info": {
+          "package_name": "com.example.arach.farmerstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829277659109-f19q91h5jn9sb8hendu5t0pkvho3mhfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZsX-PjMBRSpDX3-mOX-cbXiSurjzZVKI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
