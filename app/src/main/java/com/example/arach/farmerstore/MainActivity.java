@@ -1,5 +1,6 @@
 package com.example.arach.farmerstore;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     public DatabaseReference testapp;
     private TextView ntextview;
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i2 = new Intent(getApplicationContext(), SellerSetting.class);
                 startActivity(i2);
+            }
+        });
+        Button button3 = (Button)findViewById(R.id.butBuyer);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i3 = new Intent(getApplicationContext(), BuyerSetting.class);
+                startActivity(i3);
             }
         });
 
