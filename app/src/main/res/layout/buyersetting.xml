@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="@string/buyhistoty"/>
+
+        <TextView
+            android:id="@+id/textdate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="10 ธันวาคม 2561" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textdate1">
+
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:id="@+id/historypic1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/textdate1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+                <TextView
+                    android:id="@+id/historyproductname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historypic1"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="มะม่วงเขียวเสวย"/>
+                <TextView
+                    android:id="@+id/historyquantity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historyfarm1"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="38dp"
+                    android:textSize="12dp"
+                    android:text="จำนวน 4 กิโลกรัม"/>
+                <TextView
+                    android:id="@+id/historyprice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historyfarm1"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="55dp"
+                    android:textSize="12dp"
+                    android:text="ราคา 400 บาท"/>
+                <TextView
+                    android:id="@+id/historyfarm1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historypic1"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="75dp"
+                    android:textSize="12dp"
+                    android:text="ร้าน FarmSandee"/>
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="52dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="10dp"
+                    android:text="ติดต่อผู้ขาย"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@id/card_view"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:id="@+id/historypic2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/textdate2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+                <TextView
+                    android:id="@+id/historyproductname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historypic2"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:text="มะม่วงเขียวเสวย"/>
+                <TextView
+                    android:id="@+id/historyquantity2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historyfarm2"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="38dp"
+                    android:textSize="12dp"
+                    android:text="จำนวน 4 กิโลกรัม"/>
+                <TextView
+                    android:id="@+id/historyprice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historyfarm2"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="55dp"
+                    android:textSize="12dp"
+                    android:text="ราคา 400 บาท"/>
+                <TextView
+                    android:id="@+id/historyfarm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/historypic2"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="75dp"
+                    android:textSize="12dp"
+                    android:text="ร้าน FarmSandee"/>
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="52dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="10dp"
+                    android:text="ติดต่อผู้ขาย"/>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -6,11 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/textName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageProfile"
+        app:layout_constraintBottom_toTopOf="@id/butEditProfile"
+        android:text="แสนดี ใจดี"/>
+
+    <Button
+        android:id="@+id/butEditProfile"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="edit Profile"
+        app:layout_constraintBottom_toTopOf="@+id/butNoti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName"/>
+
     <Button
         android:id="@+id/butNoti"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="20dp"
         android:text="Notification"
         app:layout_constraintBottom_toTopOf="@+id/butLogout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,36 +61,23 @@
         app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
-        android:id="@+id/butEditProfile"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="146dp"
-        android:text="edit Profile"
-        app:layout_constraintBottom_toTopOf="@+id/butBuyer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
-
-    <Button
         android:id="@+id/butLogout"
         android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="42dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
         android:background="@android:color/holo_red_light"
         android:text="Logout"
-        app:layout_constraintBottom_toTopOf="@+id/butSeller"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/butNoti" />
 
     <Button
         android:id="@+id/butSeller"
-        android:layout_width="150dp"
+        android:layout_width="160dp"
         android:layout_height="80dp"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
         android:text="Seller Setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/butBuyer"
@@ -67,16 +87,15 @@
     <Button
         android:onClick="addData"
         android:id="@+id/butBuyer"
-        android:layout_width="150dp"
+        android:layout_width="160dp"
         android:layout_height="80dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
         android:text="Buyer Setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/butSeller"
-        app:layout_constraintTop_toBottomOf="@+id/butLogout"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toBottomOf="@+id/butLogout" />
 
     <TextView
         android:id="@+id/test"
