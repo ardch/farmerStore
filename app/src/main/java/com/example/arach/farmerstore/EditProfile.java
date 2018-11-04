@@ -31,10 +31,8 @@ import java.util.List;
 import java.util.Map;
 
 public class EditProfile extends AppCompatActivity implements View.OnClickListener {
-    EditText editTextEmail, editTextPassword, editTextName, editTextPhone;
-    TextView textEmail, textPassword, textName, textPhone, textAddress;
+    TextView textEmail, textPassword, textName, textPhone, textAddress, textLevel2;
     private FirebaseAuth firebaseAuth;
-    private TextView ntextview;
     public DatabaseReference databaseReference;
     private static final String PREFS = "PREFS";
     String userID;
@@ -58,13 +56,13 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
         textName = (TextView) findViewById(R.id.textName);
         textPhone = (TextView) findViewById(R.id.textPhone);
         textAddress = (TextView) findViewById(R.id.textAddress);
+        textLevel2 =(TextView) findViewById(R.id.level2);
 
         /* ** Click and Edit ** */
         textName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), EditActivity.class);
-                i.putExtra("head", "แก้ไขชื่อ-นามสกุล");
                 i.putExtra("data", "name");
                 startActivity(i);
             }
@@ -73,7 +71,6 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), EditActivity.class);
-                i.putExtra("head", "แก้ไขเบอร์โทร");
                 i.putExtra("data", "phone");
                 startActivity(i);
             }
@@ -82,8 +79,14 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), EditActivity.class);
-                i.putExtra("head", "แก้ไขที่อยู่");
                 i.putExtra("data", "address");
+                startActivity(i);
+            }
+        });
+        textLevel2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), EditLevel2Activity.class);
                 startActivity(i);
             }
         });
@@ -103,9 +106,12 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
                 textPhone.setText(phone);
                 textAddress.setText(address);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(),
+                        "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
             }
         });
     }
@@ -130,12 +136,12 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
     }*/
 
     // handle button activities
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.actionbarcheck) {
             // do something here
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }
