@@ -16,6 +16,7 @@
     <string name="datetosend">วันที่จัดส่งสินค้าได้</string>
     <string name="buyhistoty">ประวัติการซื้อสินค้า</string>
     <string name="selectdate">เลือกวันที่</string>
+    <string name="level2Regis">ลงทะเบียนสมาชิกระดับ 2</string>
     <string-array name="proUnit">
         <item>กิโลกรัม</item>
         <item>ผล</item>

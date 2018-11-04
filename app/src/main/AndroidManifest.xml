@@ -19,13 +19,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".EditProfile"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".SellerSetting"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity android:name=".AddProduct"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity android:name=".BuyerSetting"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".EditProfile"/>
     </application>
 
 </manifest>

@@ -1,184 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="18dp">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/EditTextUsername"
-                android:layout_width="256dp"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/text1"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="59dp"
-                android:layout_marginEnd="60dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:includeFontPadding="false"
-                android:inputType="none"
-                tools:text="@tools:sample/cities" />
-
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="41dp"
-                android:text="@string/username"/>
+                android:layout_marginTop="15dp"
+                android:text="@string/email"/>
 
-            <EditText
-                android:id="@+id/EditTextPassword"
-                android:layout_width="252dp"
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/text2"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="125dp"
-                android:layout_marginEnd="60dp"
-                android:ems="10"
-                android:hint="@string/password"
-                android:importantForAutofill="no"
+                android:layout_below="@+id/text1"
+                android:padding="5dp"
+                android:layout_marginTop="3dp"
                 android:includeFontPadding="false"
-                android:inputType="textPassword"
-                android:text=""/>
+                android:textSize="18sp"
+                tools:text="@tools:sample/cities" />
 
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="106dp"
+                android:layout_below="@+id/textEmail"
+                android:layout_marginTop="5dp"
                 android:text="@string/password" />
 
-            <EditText
-                android:id="@+id/EditTextName"
-                android:layout_width="256dp"
+            <TextView
+                android:id="@+id/textPassword"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/text1"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="204dp"
-                android:layout_marginEnd="59dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="แสนดี ใจดี"
+                android:layout_below="@+id/text2"
+                android:padding="5dp"
+                android:layout_marginTop="3dp"
                 android:includeFontPadding="false"
-                android:inputType="text|textPersonName" />
+                android:inputType="textPassword"
+                android:textSize="18sp"
+                android:text="Password"/>
 
             <TextView
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="186dp"
+                android:layout_below="@+id/textPassword"
+                android:layout_marginTop="20dp"
                 android:text="@string/fullname" />
 
-            <EditText
-                android:id="@+id/EditTextPhone"
-                android:layout_width="253dp"
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/EditTextName"
-                android:layout_alignEnd="@+id/text4"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="269dp"
-                android:layout_marginEnd="59dp"
-                android:ems="10"
-                android:hint="0811111111"
-                android:importantForAutofill="no"
+                android:padding="5dp"
+                android:layout_below="@+id/text3"
+                android:layout_marginTop="3dp"
                 android:includeFontPadding="false"
-                android:inputType="number|phone"
-                android:text="" />
+                android:textSize="18sp"
+                tools:text="@tools:sample/full_names" />
 
             <TextView
                 android:id="@+id/text4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="251dp"
+                android:layout_below="@+id/textName"
+                android:layout_marginTop="5dp"
                 android:text="@string/tel" />
 
-            <EditText
-                android:id="@+id/EditTextEmail"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textPhone"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/text5"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="333dp"
-                android:layout_marginEnd="60dp"
-                android:ems="10"
-                android:hint="example@mail.com"
-                android:importantForAutofill="no"
+                android:padding="5dp"
+                android:layout_below="@+id/text4"
+                android:layout_marginTop="3dp"
                 android:includeFontPadding="false"
-                android:inputType="textEmailAddress"
-                android:text="" />
+                android:textSize="18sp"
+                tools:text="@tools:sample/us_phones" />
 
             <TextView
                 android:id="@+id/text5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="315dp"
-                android:text="@string/email" />
-
-            <EditText
-                android:id="@+id/edit_text6"
-                android:layout_width="253dp"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/EditTextEmail"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="-2dp"
-                android:layout_marginTop="390dp"
-                android:layout_marginEnd="59dp" />
+                android:layout_below="@+id/textPhone"
+                android:layout_marginTop="5dp"
+                android:text="@string/address" />
 
             <TextView
-                android:id="@+id/text9"
-                android:layout_width="wrap_content"
+                android:id="@+id/textAddress"
+                android:layout_width="253dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="381dp"
-                android:text="@string/address" />
+                android:padding="5dp"
+                android:layout_below="@+id/text5"
+                android:layout_marginTop="3dp"
+                android:textSize="18sp"
+                tools:text="@tools:sample/cities" />
+
+            <TextView
+                android:id="@+id/level2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textAddress"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:text="@string/level2Regis"/>
 
             <Button
                 android:id="@+id/but_delacc"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
+                android:padding="2dp"
+                android:layout_below="@+id/level2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="482dp"
-                android:layout_marginBottom="0dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/deleteAccount" />
 
         </RelativeLayout>
-    </ScrollView>
+    </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

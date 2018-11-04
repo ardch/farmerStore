@@ -1,8 +1,14 @@
 package com.example.arach.farmerstore;
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,80 +19,93 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EditProfile extends AppCompatActivity implements View.OnClickListener {
     EditText editTextEmail, editTextPassword, editTextName, editTextPhone;
+    TextView textEmail, textPassword, textName, textPhone, textAddress;
     private FirebaseAuth firebaseAuth;
     private TextView ntextview;
     public DatabaseReference databaseReference;
+    private static final String PREFS = "PREFS";
+    String userID;
+    String email, name, phone, address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.editprofile);
 
-        /* Set Variable */
-        editTextEmail = (EditText) findViewById(R.id.EditTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.EditTextPassword);
-        editTextName = (EditText) findViewById(R.id.EditTextUsername);
-        editTextPhone = (EditText) findViewById(R.id.EditTextPhone);
+        /* Action Bar */
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Edit Profile");
 
+        userID = "DgFh0QHMmeN1YmBzhPuIRrLdWgg2";
         firebaseAuth = FirebaseAuth.getInstance();
-        findViewById(R.id.but_delacc).setOnClickListener(this);
+    //    findViewById(R.id.but_delacc).setOnClickListener(this);
+
+        textEmail = (TextView) findViewById(R.id.textEmail);
+        textPassword = (TextView) findViewById(R.id.textPassword);
+        textName = (TextView) findViewById(R.id.textName);
+        textPhone = (TextView) findViewById(R.id.textPhone);
+        textAddress = (TextView) findViewById(R.id.textAddress);
+
+        /* ** Click and Edit ** */
+        textName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), EditActivity.class);
+                i.putExtra("head", "แก้ไขชื่อ-นามสกุล");
+                i.putExtra("data", "name");
+                startActivity(i);
+            }
+        });
+        textPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), EditActivity.class);
+                i.putExtra("head", "แก้ไขเบอร์โทร");
+                i.putExtra("data", "phone");
+                startActivity(i);
+            }
+        });
+        textAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), EditActivity.class);
+                i.putExtra("head", "แก้ไขที่อยู่");
+                i.putExtra("data", "address");
+                startActivity(i);
+            }
+        });
 
         /* ** Show Data from Database ** */
-        ntextview = (TextView) findViewById(R.id.edit_text6);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference();
+        databaseReference = database.getReference().child("Users").child(userID);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Map map = (Map) dataSnapshot.getValue();
-                String username = String.valueOf(map.get("id"));
-                ntextview.setText(username);
+                email = dataSnapshot.child("email").getValue(String.class);
+                name = dataSnapshot.child("name").getValue(String.class);
+                phone = dataSnapshot.child("phone").getValue(String.class);
+                address = dataSnapshot.child("address").getValue(String.class);
+                textEmail.setText(email);
+                textName.setText(name);
+                textPhone.setText(phone);
+                textAddress.setText(address);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
-
-    private void registerNewUser(){
-
-        final String email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
-        final String username = editTextName.getText().toString().trim();
-        final String phone = editTextPhone.getText().toString().trim();
-
-        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    com.example.arach.farmerstore.User user = new com.example.arach.farmerstore.User(
-                            username, email, phone
-                    );
-                    FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth
-                            .getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(EditProfile.this, "Register Success",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-                else {
-                    Toast.makeText(EditProfile.this, "Failed",
-                            Toast.LENGTH_SHORT).show();
-                }
             }
         });
     }
@@ -94,9 +113,6 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-            case R.id.but_delacc:
-                registerNewUser();
-                break;
         }
     }
     @Override
@@ -105,5 +121,21 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
         if(firebaseAuth != null) {
 
         }
+    }
+    // create an action bar button
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menuactionbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }*/
+
+    // handle button activities
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.actionbarcheck) {
+            // do something here
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
