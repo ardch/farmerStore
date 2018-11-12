@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 //        i = new Intent(getApplicationContext(), MainActivity.class); startActivity(i);
                         return true;
                     case R.id.taborder:
-                //        i = new Intent(getApplicationContext(), SellerSetting.class); startActivity(i);
+                        i = new Intent(getApplicationContext(), SellerSetting.class); startActivity(i);
                         return true;
                     case R.id.tabrequest:
                 //        i = new Intent(getApplicationContext(), BuyerSetting.class); startActivity(i);

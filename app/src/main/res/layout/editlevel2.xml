@@ -17,5 +17,16 @@
         android:layout_height="40dp"
         android:layout_below="@+id/chooseimg"
         android:text="Upload"/>
+    <TextView
+        android:id="@+id/textimgname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="150dp"/>
 
 </RelativeLayout>

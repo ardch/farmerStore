@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="linearLayout0" type="id"></item>
+    <item name="linearLayout1" type="id"></item>
+    <item name="linearLayout2" type="id"></item>
+    <item name="linearLayout3" type="id"></item>
+    <item name="linearLayout4" type="id"></item>
+    <item name="linearLayout5" type="id"></item>
+    <item name="relativeLayout1" type="id"></item>
+    <item name="relativeLayout2" type="id"></item>
+    <item name="relativeLayout3" type="id"></item>
+    <item name="relativeLayout4" type="id"></item>
+    <item name="relativeLayout5" type="id"></item>
+    <item name="relativeLayout6" type="id"></item>
+    <item name="relativeLayout7" type="id"></item>
+
+    <item name="relativeLayout8" type="id"></item>
+    <item name="relativeLayout9" type="id"></item>
+    <item name="relativeLayout10" type="id"></item>
+    <item name="textProductSell1" type="id"></item>
+    <item name="textProductSell2" type="id"></item>
+    <item name="textProductSell3" type="id"></item>
+    <item name="textProductSell4" type="id"></item>
+    <item name="textProductSell5" type="id"></item>
+    <item name="textProductSell6" type="id"></item>
+    <item name="textProductSell7" type="id"></item>
+    <item name="textProductSell8" type="id"></item>
+    <item name="textProductSell9" type="id"></item>
+    <item name="textProductSell10" type="id"></item>
+
+    <item name="textProductName1" type="id"></item>
+    <item name="textProductName2" type="id"></item>
+    <item name="textProductName3" type="id"></item>
+    <item name="textProductName4" type="id"></item>
+    <item name="textProductName5" type="id"></item>
+    <item name="textProductName6" type="id"></item>
+    <item name="textProductName7" type="id"></item>
+    <item name="textProductName8" type="id"></item>
+    <item name="textProductName9" type="id"></item>
+    <item name="textProductName10" type="id"></item>
+</resources>
